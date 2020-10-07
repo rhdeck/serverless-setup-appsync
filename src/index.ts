@@ -1,16 +1,16 @@
 import { join } from "path";
 import { existsSync, mkdirSync, writeFileSync, readFileSync } from "fs";
 import { getAppSync, getResources } from "@raydeck/serverless-resources";
-import { findStage } from "@raydeck/serverless-stage";
+import { findRegion, findStage } from "@raydeck/serverless-stage";
 import { getServerlessConfig } from "@raydeck/serverless-base";
 import type { PromiseValue } from "type-fest";
 export async function getConfig({
-  region = "us-east-1",
+  region = findRegion() || process.env.AWS_REGION || "us-east-1",
   stage = findStage() ?? "dev",
   path = process.cwd(),
   appsyncPath,
 }: {
-  region?: string;
+  region: string;
   stage?: string;
   path?: string;
   appsyncPath?: string;

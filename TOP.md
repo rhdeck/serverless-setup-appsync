@@ -1,1 +1,1 @@
-#serverless-setup-appsync
+# serverless-setup-appsync
