@@ -17,7 +17,7 @@ npx @raydeck/serverless-setup-appsync [options]
 <a name="_librarymd"></a>
 
 
-# @raydeck/serverless-setup-appsync - v1.0.0
+# @raydeck/serverless-setup-appsync - v1.0.1
 
 ## Index
 
@@ -38,7 +38,7 @@ npx @raydeck/serverless-setup-appsync [options]
 
 • **appSyncPath**: *any*
 
-*Defined in [bin.ts:15](https://github.com/rhdeck/serverless-setup-appsync/blob/3d5b5d2/src/bin.ts#L15)*
+*Defined in [bin.ts:15](https://github.com/rhdeck/serverless-setup-appsync/blob/53dce72/src/bin.ts#L15)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **region**: *any*
 
-*Defined in [bin.ts:15](https://github.com/rhdeck/serverless-setup-appsync/blob/3d5b5d2/src/bin.ts#L15)*
+*Defined in [bin.ts:15](https://github.com/rhdeck/serverless-setup-appsync/blob/53dce72/src/bin.ts#L15)*
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 • **stage**: *any*
 
-*Defined in [bin.ts:15](https://github.com/rhdeck/serverless-setup-appsync/blob/3d5b5d2/src/bin.ts#L15)*
+*Defined in [bin.ts:15](https://github.com/rhdeck/serverless-setup-appsync/blob/53dce72/src/bin.ts#L15)*
 
 ## Functions
 
@@ -62,7 +62,7 @@ ___
 
 ▸ **getConfig**(`__namedParameters`: object): *Promise‹object›*
 
-*Defined in [index.ts:7](https://github.com/rhdeck/serverless-setup-appsync/blob/3d5b5d2/src/index.ts#L7)*
+*Defined in [index.ts:7](https://github.com/rhdeck/serverless-setup-appsync/blob/53dce72/src/index.ts#L7)*
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ Name | Type | Default |
 ------ | ------ | ------ |
 `appsyncPath` | undefined &#124; string | - |
 `path` | string | process.cwd() |
-`region` | string | "us-east-1" |
+`region` | string | findRegion() || process.env.AWS_REGION || "us-east-1" |
 `stage` | string | findStage() ?? "dev" |
 
 **Returns:** *Promise‹object›*
@@ -83,7 +83,7 @@ ___
 
 ▸ **writeConfig**(`config`: PromiseValue‹ReturnType‹typeof getConfig››, `path`: string): *void*
 
-*Defined in [index.ts:33](https://github.com/rhdeck/serverless-setup-appsync/blob/3d5b5d2/src/index.ts#L33)*
+*Defined in [index.ts:33](https://github.com/rhdeck/serverless-setup-appsync/blob/53dce72/src/index.ts#L33)*
 
 **Parameters:**
 
