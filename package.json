@@ -1,6 +1,6 @@
 {
   "name": "@raydeck/serverless-setup-appsync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate appsync config for webapp and react native clients in serverless monorepos",
   "main": "lib/index.js",
   "bin": "lib/bin.js",
